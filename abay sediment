@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <!-- Background gradients -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#063d66"/>
+      <stop offset="48%" stop-color="#0b6691"/>
+      <stop offset="100%" stop-color="#e2a52f"/>
+    </linearGradient>
+
+    <linearGradient id="mountainsFar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#376e68"/>
+      <stop offset="100%" stop-color="#173e42"/>
+    </linearGradient>
+
+    <linearGradient id="mountainsNear" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#275b3c"/>
+      <stop offset="100%" stop-color="#102e28"/>
+    </linearGradient>
+
+    <linearGradient id="river" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#77d4e4"/>
+      <stop offset="45%" stop-color="#168ec2"/>
+      <stop offset="100%" stop-color="#064e8b"/>
+    </linearGradient>
+
+    <linearGradient id="dam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d8e4e5"/>
+      <stop offset="45%" stop-color="#849da3"/>
+      <stop offset="100%" stop-color="#3b5961"/>
+    </linearGradient>
+
+    <linearGradient id="overlay" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#061b2a" stop-opacity="0.55"/>
+      <stop offset="55%" stop-color="#061b2a" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#061b2a" stop-opacity="0.72"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#000000" flood-opacity="0.42"/>
+    </filter>
+
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="11" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <clipPath id="roundClip">
+      <rect width="1200" height="1200" rx="28" ry="28"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#roundClip)">
+    <!-- Sky -->
+    <rect width="1200" height="1200" fill="url(#sky)"/>
+
+    <!-- Sun -->
+    <circle cx="890" cy="212" r="86" fill="#ffd66b" opacity="0.94" filter="url(#glow)"/>
+    <circle cx="890" cy="212" r="62" fill="#fff0ae"/>
+
+    <!-- Clouds -->
+    <path d="M48 235 C110 195, 172 218, 226 250 C281 214, 367 216, 421 262
+             C362 279, 131 283, 48 271 Z"
+          fill="#d9f2f2" opacity="0.18"/>
+    <path d="M680 342 C740 300, 807 321, 848 357 C897 316, 976 324, 1026 373
+             C936 390, 756 389, 680 376 Z"
+          fill="#d9f2f2" opacity="0.15"/>
+
+    <!-- Distant highlands -->
+    <path d="M0 520 L120 430 L242 483 L362 372 L490 478 L635 385
+             L778 496 L924 390 L1074 470 L1200 412 L1200 725 L0 725 Z"
+          fill="url(#mountainsFar)" opacity="0.96"/>
+
+    <!-- Mid mountain texture -->
+    <path d="M0 628 L145 515 L268 570 L412 450 L560 572 L710 464
+             L849 575 L1000 477 L1200 568 L1200 800 L0 800 Z"
+          fill="#1e594b" opacity="0.80"/>
+
+    <!-- Near Ethiopian highlands -->
+    <path d="M0 738 L130 601 L256 687 L386 562 L526 714 L664 591
+             L815 691 L954 555 L1084 666 L1200 612 L1200 1200 L0 1200 Z"
+          fill="url(#mountainsNear)"/>
+
+    <!-- Highland highlights -->
+    <path d="M0 755 L130 620 L256 705 L386 582 L526 731 L664 611
+             L815 708 L954 575 L1084 683 L1200 630"
+          fill="none" stroke="#659b53" stroke-width="18" opacity="0.48"/>
+    <path d="M130 645 L175 718 M218 679 L274 753 M383 608 L430 704
+             M650 624 L691 713 M946 595 L988 687 M1081 700 L1124 765"
+          stroke="#9ac463" stroke-width="10" opacity="0.25"/>
+
+    <!-- Abay River -->
+    <path d="M670 570
+             C630 670, 773 719, 704 802
+             C643 874, 429 826, 401 934
+             C379 1016, 487 1070, 540 1200
+             L876 1200
+             C809 1083, 717 1014, 752 929
+             C787 842, 970 816, 918 718
+             C875 636, 773 645, 785 570 Z"
+          fill="url(#river)" opacity="0.96"/>
+
+    <path d="M724 594
+             C697 690, 844 737, 774 819
+             C706 897, 501 879, 490 953
+             C478 1033, 568 1093, 627 1200"
+          fill="none" stroke="#b9eff4" stroke-width="15" opacity="0.48"/>
+
+    <!-- Dam -->
+    <g transform="translate(692 704)" filter="url(#shadow)">
+      <path d="M-152 47 L-124 -32 L145 -32 L172 47 Z" fill="url(#dam)"/>
+      <rect x="-116" y="-57" width="248" height="30" rx="4" fill="#dce8e7"/>
+      <rect x="-89" y="-94" width="42" height="39" fill="#b7cbd0"/>
+      <rect x="-35" y="-105" width="42" height="50" fill="#b7cbd0"/>
+      <rect x="19" y="-94" width="42" height="39" fill="#b7cbd0"/>
+      <rect x="73" y="-82" width="42" height="27" fill="#b7cbd0"/>
+      <g stroke="#405e64" stroke-width="5" opacity="0.75">
+        <line x1="-102" y1="-25" x2="-122" y2="43"/>
+        <line x1="-63" y1="-25" x2="-77" y2="43"/>
+        <line x1="-24" y1="-25" x2="-31" y2="43"/>
+        <line x1="15" y1="-25" x2="15" y2="43"/>
+        <line x1="54" y1="-25" x2="62" y2="43"/>
+        <line x1="93" y1="-25" x2="108" y2="43"/>
+      </g>
+      <path d="M-145 52 C-111 87,-62 73,-23 102 C12 128,54 105,91 130 C119 149,148 133,174 152"
+            fill="none" stroke="#d0f4f6" stroke-width="10" opacity="0.68"/>
+    </g>
+
+    <!-- Electricity towers -->
+    <g stroke="#172d31" stroke-width="7" fill="none" opacity="0.75">
+      <path d="M961 696 L935 824 M961 696 L988 824 M945 760 L978 760 M939 800 L985 800"/>
+      <path d="M1058 735 L1036 842 M1058 735 L1081 842 M1044 790 L1072 790 M1040 823 L1077 823"/>
+      <path d="M978 718 C1012 704, 1029 718, 1054 748" stroke-width="3"/>
+    </g>
+
+    <!-- Dark readability overlay -->
+    <rect width="1200" height="1200" fill="url(#overlay)"/>
+
+    <!-- Ethiopian-color top accent -->
+    <rect x="0" y="0" width="1200" height="14" fill="#23824c"/>
+    <rect x="0" y="14" width="1200" height="14" fill="#f1c63d"/>
+    <rect x="0" y="28" width="1200" height="14" fill="#c73535"/>
+
+    <!-- Header label -->
+    <g transform="translate(82 92)">
+      <rect x="0" y="0" width="370" height="52" rx="26" fill="#0c2736" opacity="0.78"/>
+      <circle cx="28" cy="26" r="9" fill="#f1c63d"/>
+      <text x="52" y="34" fill="#ffffff" font-family="Arial, Helvetica, sans-serif"
+            font-size="22" font-weight="700" letter-spacing="2">ETHIOPIA • ABAY</text>
+    </g>
+
+    <!-- Main text -->
+    <g filter="url(#shadow)">
+      <text x="600" y="253" text-anchor="middle" fill="#ffffff"
+            font-family="Arial, Helvetica, sans-serif" font-size="74" font-weight="800"
+            letter-spacing="1">ABAY IS ETHIOPIA’S</text>
+      <text x="600" y="338" text-anchor="middle" fill="#ffd366"
+            font-family="Arial, Helvetica, sans-serif" font-size="82" font-weight="900"
+            letter-spacing="1">RIGHT TO DEVELOPMENT</text>
+
+      <line x1="318" y1="382" x2="882" y2="382" stroke="#f1c63d" stroke-width="4"/>
+
+      <text x="600" y="446" text-anchor="middle" fill="#ffffff"
+            font-family="Arial, Helvetica, sans-serif" font-size="37" font-weight="600">
+        GERD is renewable hydropower —
+      </text>
+      <text x="600" y="493" text-anchor="middle" fill="#ffffff"
+            font-family="Arial, Helvetica, sans-serif" font-size="37" font-weight="600">
+        built for electricity, opportunity and progress.
+      </text>
+    </g>
+
+    <!-- Bottom panel -->
+    <g transform="translate(65 1020)">
+      <rect x="0" y="0" width="1070" height="112" rx="20" fill="#071f2a" opacity="0.80"/>
+      <text x="535" y="48" text-anchor="middle" fill="#ffffff"
+            font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700"
+            letter-spacing="1">EQUITY  •  COOPERATION  •  AFRICAN SOLUTIONS</text>
+      <text x="535" y="85" text-anchor="middle" fill="#b9dce1"
+            font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="500">
+        #Ethiopia   #Abay   #GERD   #NileBasin
+      </text>
+    </g>
+  </g>
+</svg>
